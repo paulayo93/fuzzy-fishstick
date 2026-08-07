@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0a1628;
+  --color-navy-deep: #061018;
+  --color-steel: #1e3a5f;
+  --color-steel-light: #2a4f7a;
+  --color-copper: #c45c26;
+  --color-copper-hover: #a84c1e;
+  --color-copper-soft: #e8a87c;
+  --color-surface: #f4f7fa;
+  --color-surface-muted: #e8eef4;
+  --color-ink: #1a2332;
+  --color-ink-muted: #5a6a7e;
+  --color-line: #d0dae6;
+
+  --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface font-body text-ink antialiased;
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-copper) 35%, transparent);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-copper);
+    outline-offset: 3px;
+  }
+}
