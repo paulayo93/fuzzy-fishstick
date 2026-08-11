@@ -57,12 +57,10 @@ File: [`src/data/about.ts`](../src/data/about.ts)
 | Export | Used for |
 |--------|----------|
 | `uniquePoints` | “What makes us unique” numbered list |
-| `leadership` | Leadership grid (name, role, bio, image path) |
 | `clientLogos` | Client logo strip |
-| `isoBadges` | Quality / HSE badge row |
 | `missionVision` | Mission and vision panels |
 
-About images live under `public/about/` (leadership, clients, iso, icons) and are referenced as `/about/...`.
+About images live under `public/about/` (clients, icons) and are referenced as `/about/...`. Hero and approach photos use `/images/...`.
 
 Culture copy still comes from `values` in [`company.ts`](../src/data/company.ts).
 

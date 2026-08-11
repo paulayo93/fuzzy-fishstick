@@ -2,18 +2,12 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { company, values } from '../data/company'
-import {
-  clientLogos,
-  isoBadges,
-  leadership,
-  missionVision,
-  uniquePoints,
-} from '../data/about'
+import { clientLogos, missionVision, uniquePoints } from '../data/about'
 import { HoverRevealImage } from '../components/HoverRevealImage'
 import { SectionHeading } from '../components/SectionHeading'
 
-const HERO_IMAGE = '/about/leadership/wellington.jpg'
-const APPROACH_IMAGE = '/about/leadership/chris.png'
+const HERO_IMAGE = '/images/hse-hero.png'
+const APPROACH_IMAGE = '/images/hse-2.png'
 
 export function About() {
   return (
@@ -108,7 +102,7 @@ export function About() {
           </div>
           <HoverRevealImage
             src={APPROACH_IMAGE}
-            alt="Ovwspelo operations leadership"
+            alt="Ovwspelo field operations"
             className="aspect-[4/3] w-full"
           />
         </div>
@@ -174,70 +168,6 @@ export function About() {
                 </h3>
                 <p className="mt-3 text-white/75 leading-relaxed">
                   {value.description}
-                </p>
-              </motion.li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <section className="bg-surface py-20 sm:py-24">
-        <div className="mx-auto max-w-6xl px-5 sm:px-8">
-          <SectionHeading
-            eyebrow="Quality & HSE"
-            title="Standards we work toward"
-            description={`${company.shortName} is committed to consistent quality, a safe working environment, and responsible environmental practice across mud engineering and fluids operations.`}
-          />
-          <p className="mt-6 max-w-3xl text-ink-muted leading-relaxed">
-            Our integrated approach to risk management, regulatory compliance,
-            and continual improvement is guided by internationally recognized
-            management system frameworks — including quality (ISO 9001),
-            occupational health & safety (ISO 45001), and environmental
-            management (ISO 14001).
-          </p>
-          <ul className="mt-12 flex flex-wrap items-end justify-center gap-8 sm:gap-12">
-            {isoBadges.map((badge) => (
-              <li key={badge.name} className="w-28 sm:w-36">
-                <img
-                  src={badge.src}
-                  alt={badge.name}
-                  className="h-auto w-full object-contain"
-                />
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <section className="bg-white py-20 sm:py-24">
-        <div className="mx-auto max-w-6xl px-5 sm:px-8">
-          <SectionHeading
-            eyebrow="Leadership"
-            title="Experienced professionals dedicated to performance"
-            description={`${company.shortName} is led by people committed to safety, delivery, and long-term value creation.`}
-          />
-          <ul className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-            {leadership.map((person, index) => (
-              <motion.li
-                key={person.name}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-              >
-                <HoverRevealImage
-                  src={person.image}
-                  alt={person.name}
-                  className="aspect-[4/5] w-full"
-                />
-                <h3 className="mt-5 font-display text-xl font-bold text-navy">
-                  {person.name}
-                </h3>
-                <p className="mt-1 text-sm font-semibold tracking-[0.12em] text-copper uppercase">
-                  {person.role}
-                </p>
-                <p className="mt-3 text-sm text-ink-muted leading-relaxed">
-                  {person.bio}
                 </p>
               </motion.li>
             ))}

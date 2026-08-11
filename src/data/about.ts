@@ -26,39 +26,6 @@ export const uniquePoints = [
   },
 ] as const
 
-export const leadership = [
-  {
-    name: 'Wellington Agharese',
-    role: 'Managing Director',
-    image: '/about/leadership/wellington.jpg',
-    bio: 'A strategic dealmaker with a track record of structuring complex, high-value transactions. He brings legal, financial, and business expertise across oil & gas, corporate finance, and commercial strategy.',
-  },
-  {
-    name: 'Ayoade Aminu',
-    role: 'Chief Operating Officer',
-    image: '/about/leadership/ayoade.jpg',
-    bio: 'Holds an MBA from the University of Lagos and a BSc in Biochemistry from the University of Ibadan. Deep oil and gas experience spanning energy banking, supply, and trading leadership roles.',
-  },
-  {
-    name: 'Chris Unanka',
-    role: 'Operations Manager',
-    image: '/about/leadership/chris.png',
-    bio: 'Project management and quality professional with two decades across IOCs and major service companies. Experience spans QA, EPC, subsea operations, marine services, and project delivery.',
-  },
-  {
-    name: 'Abiola Ige',
-    role: 'Head of Finance',
-    image: '/about/leadership/abiola.jpg',
-    bio: 'Chartered Accountant (ACA) with an MBA from Business School Netherlands. Fifteen-plus years across insurance, banking, audit, capital markets, and risk management.',
-  },
-  {
-    name: 'Joy Ola-Fadunsin',
-    role: 'QAQC',
-    image: '/about/leadership/joy.jpg',
-    bio: 'QHSE professional focused on quality, health, safety, and environmental management systems. Supports certification readiness and strengthens controls across operations.',
-  },
-] as const
-
 export const clientLogos = [
   { name: 'Shell', src: '/about/clients/shell.png' },
   { name: 'Addax Petroleum', src: '/about/clients/addax.png' },
@@ -71,12 +38,6 @@ export const clientLogos = [
   { name: 'Arios', src: '/about/clients/arios.png' },
   { name: 'NIMASA', src: '/about/clients/nimasa.png' },
   { name: 'Oriental Energy', src: '/about/clients/oriental.png' },
-] as const
-
-export const isoBadges = [
-  { name: 'ISO 9001', src: '/about/iso/iso-9001.png' },
-  { name: 'ISO 45001', src: '/about/iso/iso-45001.png' },
-  { name: 'ISO 14001', src: '/about/iso/iso-14001.png' },
 ] as const
 
 export const missionVision = {
