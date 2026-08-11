@@ -1,56 +1,46 @@
 export const servicesPage = {
   hero: {
-    eyebrow: 'Services',
-    title: 'Integrated offshore and energy support',
+    eyebrow: 'Capabilities',
+    title: 'What we do',
     image: '/images/services-hero.png',
   },
   intro:
-    'We offer bespoke solutions to keep your facilities operating at optimal performance — combining specialist teams, proven technology, and reliable logistics.',
-  featured: [
+    'Ovwspelo provides Mud Engineering, Completion Fluids, Filtration Services, Solids Control, and Supply & Logistics — specialized, experience-backed support for oil companies in Nigeria.',
+  items: [
     {
-      title: 'Vessel Chartering',
+      title: 'Mud Engineering',
       description:
-        'Ovwspelo provides reliable and flexible vessel chartering solutions to support offshore operations across the marine and energy sectors.',
-      details: [
-        'Our fleet partners are maintained to international standards and crewed by experienced professionals to ensure safe, efficient, and uninterrupted operations.',
-        'We work closely with clients to deploy the right vessel for each project, optimizing performance, cost efficiency, and operational reliability in line with project requirements.',
-      ],
+        'Dependable mud engineering with demonstrated technical capabilities and a team of highly experienced engineers.',
       image: '/images/vessel-chartering.jpg',
-      imageAlt: 'Offshore support vessel underway',
+      imageAlt: 'Mud engineering field operations',
     },
     {
-      title: 'Offshore Waste',
+      title: 'Completion Fluids',
       description:
-        'We deliver compliant offshore waste management and recovery services in accordance with MARPOL regulations and Nigerian maritime standards.',
-      details: [
-        'Our operations focus on the safe handling, collection, transportation, and disposal of offshore-generated waste, minimizing environmental impact while supporting sustainable offshore activities.',
-        'Through structured processes and regulatory alignment, we help clients meet environmental obligations without compromising operational efficiency.',
-      ],
+        'Improve well productivity by reducing damage to the producing zone and helping prepare the wellbore.',
       image: '/images/offshore-waste-services.jpg',
-      imageAlt: 'Offshore waste handling operations',
+      imageAlt: 'Completion fluids operations',
     },
-  ],
-  other: [
     {
-      title: 'Survey & Geotechnical Services',
+      title: 'Filtration Services',
       description:
-        'Whether operating in deep offshore or shallow waters, we understand the risks involved in complex marine projects. Our expertise and partnerships deliver tailored solutions for every operational need.',
+        'Protect the formation when solids-bearing fluids are injected; contamination shortens well life.',
       image: '/images/survey-geotechnical.jpg',
-      imageAlt: 'Survey and geotechnical operations at sea',
+      imageAlt: 'Filtration services on site',
     },
     {
-      title: 'Inspection, Maintenance & Repair',
+      title: 'Solids Control',
       description:
-        'Offshore oil and gas projects demand reliable marine support. Ovwspelo delivers comprehensive IMR services backed by capable vessels and specialized equipment, including ROV support.',
+        'Technologies that optimize drilling efficiency by maintaining fluid integrity and reducing fluid losses.',
       image: '/images/imr.jpg',
-      imageAlt: 'Inspection, maintenance and repair operations',
+      imageAlt: 'Solids control equipment',
     },
     {
-      title: 'Subsea Construction & Installation',
+      title: 'Supply and Logistics',
       description:
-        'We provide consultancy and support for front-end engineering, feasibility studies, concept development, design, installation, and removal of offshore and marine structures.',
+        'Reliable supply and logistics to ensure efficiency and optimization in drilling processes.',
       image: '/images/services-vessel-chartering-2.png',
-      imageAlt: 'Subsea construction support vessel',
+      imageAlt: 'Supply and logistics support',
     },
   ],
 } as const

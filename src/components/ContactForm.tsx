@@ -62,12 +62,12 @@ export function ContactForm() {
   if (submitted) {
     return (
       <div
-        className="flex flex-col items-start gap-4 border border-line bg-white p-8"
+        className="flex flex-col items-start gap-4 border border-line bg-white p-6 sm:p-8"
         role="status"
       >
         <CheckCircle2 className="text-copper" size={36} aria-hidden />
         <div>
-          <h3 className="font-display text-2xl font-bold text-navy">
+          <h3 className="font-display text-2xl font-bold tracking-tight text-navy">
             Message received
           </h3>
           <p className="mt-2 text-ink-muted leading-relaxed">
@@ -78,7 +78,7 @@ export function ContactForm() {
         <button
           type="button"
           onClick={() => setSubmitted(false)}
-          className="mt-2 text-sm font-semibold text-copper hover:text-copper-hover"
+          className="mt-1 text-sm font-semibold text-copper transition-colors hover:text-copper-hover"
         >
           Send another message
         </button>
@@ -95,6 +95,16 @@ export function ContactForm() {
       noValidate
       className="border border-line bg-white p-6 sm:p-8"
     >
+      <div className="mb-7">
+        <h2 className="font-display text-2xl font-bold tracking-tight text-navy">
+          Send a message
+        </h2>
+        <p className="mt-2 text-ink-muted leading-relaxed">
+          Tell us about the scope, location, and timeline — we will route it to
+          the right engineering lead.
+        </p>
+      </div>
+
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className="text-sm font-semibold text-navy">
@@ -183,7 +193,7 @@ export function ContactForm() {
 
       <button
         type="submit"
-        className="mt-6 w-full bg-copper px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-copper-hover sm:w-auto"
+        className="mt-6 w-full bg-copper px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-copper-hover active:bg-copper-hover sm:w-auto"
       >
         Send message
       </button>
