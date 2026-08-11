@@ -11,9 +11,32 @@ export const company = {
   hours: 'Mon – Fri, 8:00 AM – 5:30 PM WAT',
 } as const
 
-export const navLinks = [
+export type NavChild = { label: string; to: string }
+
+export type NavLink =
+  | { label: string; to: string; children?: undefined }
+  | { label: string; to: string; children: readonly NavChild[] }
+
+export const navLinks: readonly NavLink[] = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
+  { label: 'Services', to: '/services' },
+  {
+    label: 'Sustainability',
+    to: '/sustainability',
+    children: [
+      { label: 'ESG', to: '/sustainability' },
+      { label: 'HSE', to: '/hse' },
+    ],
+  },
+  {
+    label: 'Stakeholders',
+    to: '/investors',
+    children: [
+      { label: 'Investors', to: '/investors' },
+      { label: 'Partners', to: '/partners' },
+    ],
+  },
   { label: 'Blog', to: '/blog' },
   { label: 'Contact Us', to: '/contact' },
 ] as const

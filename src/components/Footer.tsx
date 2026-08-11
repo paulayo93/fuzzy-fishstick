@@ -21,13 +21,27 @@ export function Footer() {
           </p>
           <ul className="mt-4 space-y-2">
             {navLinks.map((link) => (
-              <li key={link.to}>
+              <li key={link.label}>
                 <Link
                   to={link.to}
                   className="text-white/75 transition-colors hover:text-white"
                 >
                   {link.label}
                 </Link>
+                {link.children ? (
+                  <ul className="mt-1 space-y-1 pl-3">
+                    {link.children.map((child) => (
+                      <li key={child.to + child.label}>
+                        <Link
+                          to={child.to}
+                          className="text-sm text-white/55 transition-colors hover:text-white"
+                        >
+                          {child.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
               </li>
             ))}
           </ul>

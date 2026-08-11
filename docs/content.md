@@ -16,7 +16,7 @@ File: [`src/data/company.ts`](../src/data/company.ts)
 | `hours` | Contact side panel |
 | `navLinks` | Navbar and footer navigation |
 | `services` | Home capabilities section |
-| `values` | About page values |
+| `values` | About page culture / values |
 
 Example — update contact email:
 
@@ -50,12 +50,28 @@ Each post includes:
 
 Add a new object to the `blogPosts` array to show another card on `/blog`. There is no individual post detail route yet — the blog page is a listing only.
 
+## About page content
+
+File: [`src/data/about.ts`](../src/data/about.ts)
+
+| Export | Used for |
+|--------|----------|
+| `uniquePoints` | “What makes us unique” numbered list |
+| `leadership` | Leadership grid (name, role, bio, image path) |
+| `clientLogos` | Client logo strip |
+| `isoBadges` | Quality / HSE badge row |
+| `missionVision` | Mission and vision panels |
+
+About images live under `public/about/` (leadership, clients, iso, icons) and are referenced as `/about/...`.
+
+Culture copy still comes from `values` in [`company.ts`](../src/data/company.ts).
+
 ## Page-specific copy
 
 Some headlines and body text are written directly in page components:
 
 - `src/pages/Home.tsx` — hero CTAs, section blurbs, image URLs
-- `src/pages/About.tsx` — story, mission/vision, domains list
+- `src/pages/About.tsx` — section framing copy around the data above
 - `src/pages/Contact.tsx` — page intro and “What to include” tips
 - `src/pages/Blog.tsx` — page intro
 
@@ -63,7 +79,7 @@ Edit those files for one-off section text that is not shared across pages.
 
 ## Images
 
-Hero and blog covers use remote Unsplash URLs. Replace with your own hosted assets or files under `public/` (reference as `/your-image.jpg`).
+About page assets are stored under `public/about/`. Hero and blog covers may still use remote Unsplash URLs. Replace with your own hosted assets or files under `public/` (reference as `/your-image.jpg`).
 
 ## Contact form behavior
 
