@@ -18,61 +18,62 @@ const fadeUp = {
 
 export function Services() {
   const { hero, intro, items } = servicesPage
-  const [leadA, leadB, ...rest] = items
+  const [leadA, leadB, leadC, leadD, ...rest] = items
+
 
   return (
     <>
-      <section className="relative min-h-[58vh] overflow-hidden pt-[4.5rem]">
-        <motion.img
-          src={hero.image}
-          alt=""
-          initial={{ scale: 1.08 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 1.4, ease }}
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 via-navy/80 to-navy/55" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(196,92,38,0.16),transparent_55%)]" />
+      <div className="flex flex-col gap-2 overflow-hidden bg-white sm:gap-3">
+        <section className="relative min-h-[58vh] overflow-hidden pt-[4.5rem]">
+          <motion.img
+            src={hero.image}
+            alt=""
+            initial={{ scale: 1.08 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1.4, ease }}
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 via-navy/80 to-navy/55" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(196,92,38,0.16),transparent_55%)]" />
 
-        <div className="relative mx-auto flex min-h-[58vh] max-w-6xl items-end px-5 pb-16 sm:px-8 sm:pb-20">
-          <div className="max-w-2xl">
-            <motion.p
-              custom={0.05}
-              variants={fadeUp}
-              initial="hidden"
-              animate="show"
-              className="text-sm font-semibold tracking-[0.18em] text-copper-soft uppercase"
-            >
-              {hero.eyebrow}
-            </motion.p>
-            <motion.h1
-              custom={0.14}
-              variants={fadeUp}
-              initial="hidden"
-              animate="show"
-              className="mt-3 font-display text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl"
-            >
-              {hero.title}
-            </motion.h1>
-            <motion.p
-              custom={0.24}
-              variants={fadeUp}
-              initial="hidden"
-              animate="show"
-              className="mt-5 max-w-xl text-lg leading-relaxed text-white/80"
-            >
-              {intro}
-            </motion.p>
+          <div className="relative mx-auto flex min-h-[58vh] max-w-6xl items-end px-5 pb-16 sm:px-8 sm:pb-20">
+            <div className="max-w-2xl">
+              <motion.p
+                custom={0.05}
+                variants={fadeUp}
+                initial="hidden"
+                animate="show"
+                className="text-sm font-semibold tracking-[0.18em] text-copper-soft uppercase"
+              >
+                {hero.eyebrow}
+              </motion.p>
+              <motion.h1
+                custom={0.14}
+                variants={fadeUp}
+                initial="hidden"
+                animate="show"
+                className="mt-3 font-display text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl"
+              >
+                {hero.title}
+              </motion.h1>
+              <motion.p
+                custom={0.24}
+                variants={fadeUp}
+                initial="hidden"
+                animate="show"
+                className="mt-5 max-w-xl text-lg leading-relaxed text-white/80"
+              >
+                {intro}
+              </motion.p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="bg-navy-deep">
-        {[leadA, leadB].map((service, index) => (
+        {[leadA, leadB, leadC, leadD].map((service, index) => (
           <motion.article
             key={service.title}
             tabIndex={0}
-            initial={{ opacity: 0, y: 32 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.7, delay: index * 0.08, ease }}
@@ -112,7 +113,7 @@ export function Services() {
                     index % 2 === 1 ? 'lg:ml-auto' : '',
                   ].join(' ')}
                 >
-                  {service.description}
+                  {service.summary}
                 </p>
                 <span
                   className={[
@@ -124,7 +125,7 @@ export function Services() {
             </div>
           </motion.article>
         ))}
-      </section>
+      </div>
 
       <section className="bg-surface py-20 sm:py-28">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
@@ -137,11 +138,11 @@ export function Services() {
             <SectionHeading
               eyebrow="More capabilities"
               title="Supporting services"
-              description="Focused support across filtration, solids control, and supply — built for efficient drilling programs."
+              description="Focused support across supply & logistics and project management — built for efficient programs."
             />
           </motion.div>
 
-          <ul className="mt-14 grid gap-6 md:grid-cols-3 md:gap-8">
+          <ul className="mt-14 grid gap-6 md:grid-cols-2 md:gap-8">
             {rest.map((service, index) => (
               <motion.li
                 key={service.title}

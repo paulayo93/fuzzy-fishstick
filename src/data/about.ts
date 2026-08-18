@@ -1,3 +1,12 @@
+export const whoWeAre = {
+  paragraphs: [
+    'Ovwspelo Limited (RC 1579853) is an indigenous Nigerian oil and gas servicing, engineering, construction, and integrated support services company incorporated on 26 April 2019 under the Companies and Allied Matters Act. The company is committed to delivering safe, innovative, and cost-effective solutions to the upstream, midstream, and downstream sectors of the oil and gas industry, while also providing high-quality civil engineering, infrastructure development, logistics, and project support services across Nigeria.',
+    'Registered with the relevant regulatory authorities, including the Nigerian Upstream Petroleum Regulatory Commission (formerly DPR), Ovwspelo Limited is strategically positioned to provide end-to-end engineering, procurement, construction, and operational support services that meet international standards of quality, safety, and environmental compliance.',
+    'With a team of experienced professionals and a strong commitment to operational excellence, Ovwspelo Limited partners with international oil companies (IOCs), indigenous operators, EPC contractors, and government agencies to deliver reliable solutions that enhance operational efficiency and project success.',
+    'We were founded to close the gap between paper excellence and site reality. Our teams bring disciplined project control and a culture that treats safety and schedule as equal obligations — not trade-offs.',
+  ],
+} as const
+
 export const uniquePoints = [
   {
     title: 'Proven field track record',

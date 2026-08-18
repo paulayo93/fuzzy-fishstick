@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Mail, MapPin, Phone } from 'lucide-react'
-import { company, navLinks } from '../data/company'
+import { company, navLinks, phoneTelHref } from '../data/company'
 
 export function Footer() {
   const year = new Date().getFullYear()
@@ -63,18 +63,25 @@ export function Footer() {
             </li>
             <li className="flex items-start gap-3">
               <Phone className="mt-0.5 shrink-0" size={16} aria-hidden />
-              <a href={`tel:${company.phone.replace(/\s/g, '')}`} className="hover:text-white">
-                {company.phone}
-              </a>
-            </li>
-            <li className="flex items-start gap-3">
-              <MapPin className="mt-0.5 shrink-0" size={16} aria-hidden />
-              <span>
-                {company.address.line1}
-                <br />
-                {company.address.line2}
+              <span className="flex flex-col gap-1">
+                {company.phones.map((phone) => (
+                  <a key={phone} href={phoneTelHref(phone)} className="hover:text-white">
+                    {phone}
+                  </a>
+                ))}
               </span>
             </li>
+            {company.addresses.map((address) => (
+              <li key={address.label} className="flex items-start gap-3">
+                <MapPin className="mt-0.5 shrink-0" size={16} aria-hidden />
+                <span>
+                  <span className="block text-sm text-white/55">{address.label}</span>
+                  {address.line1}
+                  <br />
+                  {address.line2}
+                </span>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

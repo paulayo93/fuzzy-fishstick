@@ -1,6 +1,14 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowRight, Drill, Droplets, Filter, Settings, Truck } from 'lucide-react'
+import {
+  ArrowRight,
+  ClipboardList,
+  Drill,
+  Droplets,
+  Filter,
+  HardHat,
+  Truck,
+} from 'lucide-react'
 import { company, services } from '../data/company'
 import { HeroBackgroundCarousel } from '../components/HeroBackgroundCarousel'
 import { SectionHeading } from '../components/SectionHeading'
@@ -9,8 +17,9 @@ const iconMap = {
   Drill,
   Droplets,
   Filter,
-  Settings,
   Truck,
+  HardHat,
+  ClipboardList,
 } as const
 
 const HERO_IMAGES = [
@@ -70,7 +79,7 @@ export function Home() {
           <SectionHeading
             eyebrow="Capabilities"
             title="What we do"
-            description="Ovwspelo provides Mud Engineering, Completion Fluids, Filtration Services, Solids Control, and Supply & Logistics — specialized, experience-backed support for oil companies in Nigeria."
+            description="Ovwspelo provides Mud Engineering, Completion Fluids, Filtration & Solids Control, Supply & Logistics, Civil Engineering & Construction, and Project Management — specialized, experience-backed support for oil companies in Nigeria."
           />
 
           <ul className="mt-14 grid gap-x-10 gap-y-12 sm:grid-cols-2">

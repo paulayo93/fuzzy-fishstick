@@ -1,6 +1,6 @@
 type SectionHeadingProps = {
   eyebrow?: string
-  title: string
+  title?: string
   description?: string
   align?: 'left' | 'center'
   light?: boolean
@@ -13,6 +13,11 @@ export function SectionHeading({
   align = 'left',
   light = false,
 }: SectionHeadingProps) {
+  const eyebrowClass = [
+    'text-sm font-semibold tracking-[0.18em] uppercase',
+    light ? 'text-copper-soft' : 'text-copper',
+  ].join(' ')
+
   return (
     <div
       className={[
@@ -20,24 +25,23 @@ export function SectionHeading({
         align === 'center' ? 'mx-auto text-center' : '',
       ].join(' ')}
     >
-      {eyebrow ? (
-        <p
-          className={[
-            'mb-3 text-sm font-semibold tracking-[0.18em] uppercase',
-            light ? 'text-copper-soft' : 'text-copper',
-          ].join(' ')}
-        >
-          {eyebrow}
-        </p>
+      {title ? (
+        <>
+          {eyebrow ? (
+            <p className={['mb-3', eyebrowClass].join(' ')}>{eyebrow}</p>
+          ) : null}
+          <h2
+            className={[
+              'font-display text-3xl font-bold tracking-tight sm:text-4xl',
+              light ? 'text-white' : 'text-navy',
+            ].join(' ')}
+          >
+            {title}
+          </h2>
+        </>
+      ) : eyebrow ? (
+        <h2 className={eyebrowClass}>{eyebrow}</h2>
       ) : null}
-      <h2
-        className={[
-          'font-display text-3xl font-bold tracking-tight sm:text-4xl',
-          light ? 'text-white' : 'text-navy',
-        ].join(' ')}
-      >
-        {title}
-      </h2>
       {description ? (
         <p
           className={[

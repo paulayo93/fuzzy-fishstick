@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { company, values } from '../data/company'
-import { clientLogos, missionVision, uniquePoints } from '../data/about'
+import { clientLogos, missionVision, uniquePoints, whoWeAre } from '../data/about'
 import { HoverRevealImage } from '../components/HoverRevealImage'
 import { SectionHeading } from '../components/SectionHeading'
 
@@ -41,25 +41,19 @@ export function About() {
 
       <section className="bg-surface py-20 sm:py-24">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
-          <SectionHeading
-            eyebrow="Who we are"
-            title={`Who ${company.shortName} is`}
-            description={`${company.name} is an integrated provider of mud engineering and fluids support services to oil and gas operators in Nigeria — spanning mud systems, completion fluids, filtration, solids control, and supply & logistics.`}
-          />
-          <p className="mt-6 max-w-3xl text-ink-muted leading-relaxed">
-            We were founded to close the gap between paper excellence and site
-            reality. Our teams bring disciplined project control and a culture
-            that treats safety and schedule as equal obligations — not
-            trade-offs.
-          </p>
+          <SectionHeading title="Who we are" />
+          <div className="mt-6 max-w-3xl space-y-4 text-ink-muted leading-relaxed">
+            {whoWeAre.paragraphs.map((paragraph) => (
+              <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="bg-white py-20 sm:py-24">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <SectionHeading
-            eyebrow="What makes us unique"
-            title="Why operators choose us"
+            title="What makes us unique"
             description="Five strengths that shape how we hire, plan, and deliver in the field."
           />
           <ul className="mt-12 grid gap-10 md:grid-cols-2 lg:grid-cols-3">
@@ -119,13 +113,15 @@ export function About() {
             {[missionVision.mission, missionVision.vision].map((item) => (
               <div
                 key={item.title}
-                className="border-l-2 border-copper bg-surface px-6 py-8"
+                className="bg-surface px-6 py-8"
               >
-                <img
-                  src={item.icon}
-                  alt=""
-                  className="h-12 w-12 object-contain"
-                />
+                <span className="flex h-12 w-12 items-center justify-center bg-navy">
+                  <img
+                    src={item.icon}
+                    alt=""
+                    className="h-7 w-7 object-contain"
+                  />
+                </span>
                 <h3 className="mt-5 font-display text-xl font-bold text-navy">
                   {item.title}
                 </h3>

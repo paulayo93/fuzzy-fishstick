@@ -1,6 +1,6 @@
 import { Mail, MapPin, Phone, Clock } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { company } from '../data/company'
+import { company, phoneTelHref } from '../data/company'
 import { ContactForm } from '../components/ContactForm'
 
 const HERO_IMAGE = '/images/request-info.jpg'
@@ -72,25 +72,32 @@ export function Contact() {
                   <Phone className="mt-0.5 shrink-0 text-copper-soft" size={18} aria-hidden />
                   <div>
                     <p className="text-sm text-white/55">Phone</p>
-                    <a
-                      href={`tel:${company.phone.replace(/\s/g, '')}`}
-                      className="font-medium transition-colors hover:text-copper-soft"
-                    >
-                      {company.phone}
-                    </a>
+                    <div className="flex flex-col gap-1">
+                      {company.phones.map((phone) => (
+                        <a
+                          key={phone}
+                          href={phoneTelHref(phone)}
+                          className="font-medium transition-colors hover:text-copper-soft"
+                        >
+                          {phone}
+                        </a>
+                      ))}
+                    </div>
                   </div>
                 </li>
-                <li className="flex gap-3">
-                  <MapPin className="mt-0.5 shrink-0 text-copper-soft" size={18} aria-hidden />
-                  <div>
-                    <p className="text-sm text-white/55">Headquarters</p>
-                    <p className="font-medium">
-                      {company.address.line1}
-                      <br />
-                      {company.address.line2}
-                    </p>
-                  </div>
-                </li>
+                {company.addresses.map((address) => (
+                  <li key={address.label} className="flex gap-3">
+                    <MapPin className="mt-0.5 shrink-0 text-copper-soft" size={18} aria-hidden />
+                    <div>
+                      <p className="text-sm text-white/55">{address.label}</p>
+                      <p className="font-medium">
+                        {address.line1}
+                        <br />
+                        {address.line2}
+                      </p>
+                    </div>
+                  </li>
+                ))}
                 <li className="flex gap-3">
                   <Clock className="mt-0.5 shrink-0 text-copper-soft" size={18} aria-hidden />
                   <div>
