@@ -14,7 +14,7 @@
   --color-ink-muted: #5a6a7e;
   --color-line: #d0dae6;
 
-  --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --font-body: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -40,5 +40,24 @@
   :focus-visible {
     outline: 2px solid var(--color-copper);
     outline-offset: 3px;
+  }
+}
+
+@keyframes client-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-client-marquee {
+  animation: client-marquee 28s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-client-marquee {
+    animation: none;
   }
 }

@@ -37,16 +37,10 @@ export const uniquePoints = [
 
 export const clientLogos = [
   { name: 'Shell', src: '/about/clients/shell.png' },
-  { name: 'Addax Petroleum', src: '/about/clients/addax.png' },
-  { name: 'Agip', src: '/about/clients/agip.png' },
-  { name: 'Tenoil', src: '/about/clients/tenoil.png' },
-  { name: 'ExxonMobil', src: '/about/clients/exxon.png' },
   { name: 'TotalEnergies', src: '/about/clients/total.png' },
-  { name: 'Amni', src: '/about/clients/amni.png' },
-  { name: 'Tulcan Energy', src: '/about/clients/tulcan.png' },
-  { name: 'Arios', src: '/about/clients/arios.png' },
-  { name: 'NIMASA', src: '/about/clients/nimasa.png' },
-  { name: 'Oriental Energy', src: '/about/clients/oriental.png' },
+  { name: 'ExxonMobil', src: '/about/clients/exxon.png' },
+  { name: 'Seplat', src: '/about/clients/seplat.png' },
+  { name: 'Petroleum Training Institute', src: '/about/clients/pti.png' },
 ] as const
 
 export const missionVision = {

@@ -179,19 +179,24 @@ export function About() {
             description="We partner with operators who trust us to deliver reliable fluids and field solutions."
             align="center"
           />
-          <ul className="mt-14 flex flex-wrap items-center justify-center gap-x-10 gap-y-8">
-            {clientLogos.map((logo) => (
-              <li
-                key={logo.name}
-                className="flex h-14 w-28 items-center justify-center sm:h-16 sm:w-32"
-              >
-                <img
-                  src={logo.src}
-                  alt={logo.name}
-                  className="max-h-full max-w-full object-contain opacity-80 grayscale transition hover:opacity-100 hover:grayscale-0"
-                />
-              </li>
-            ))}
+        </div>
+        <div className="mt-14 overflow-hidden">
+          <ul className="animate-client-marquee flex w-max items-center gap-x-14 sm:gap-x-20">
+            {[0, 1].flatMap((set) =>
+              clientLogos.map((logo) => (
+                <li
+                  key={`${logo.name}-${set}`}
+                  aria-hidden={set === 1 ? true : undefined}
+                  className="flex h-20 w-40 shrink-0 items-center justify-center sm:h-24 sm:w-48"
+                >
+                  <img
+                    src={logo.src}
+                    alt={set === 0 ? logo.name : ''}
+                    className="max-h-full max-w-full object-contain opacity-80 grayscale transition hover:opacity-100 hover:grayscale-0"
+                  />
+                </li>
+              )),
+            )}
           </ul>
         </div>
       </section>

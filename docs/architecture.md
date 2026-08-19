@@ -12,7 +12,7 @@ Overview of how the Ovwspelo landing page is structured.
 | Routing | React Router DOM 7 |
 | Motion | Framer Motion |
 | Icons | lucide-react |
-| Fonts | Syne (display), Source Sans 3 (body) via Google Fonts |
+| Fonts | Plus Jakarta Sans (display), Source Sans 3 (body) via Google Fonts |
 
 There is no backend or CMS. Content lives in TypeScript data files under `src/data/`.
 
@@ -69,7 +69,7 @@ Brand colors and fonts are defined in [`src/index.css`](../src/index.css) via Ta
 | `copper` | `#C45C26` | Accent / CTAs |
 | `surface` | `#F4F7FA` | Page background |
 | `ink` / `ink-muted` | slate tones | Body text |
-| `font-display` | Syne | Brand and headlines |
+| `font-display` | Plus Jakarta Sans | Brand and headlines |
 | `font-body` | Source Sans 3 | Body copy |
 
 Use Tailwind classes such as `bg-navy`, `text-copper`, `font-display`.
