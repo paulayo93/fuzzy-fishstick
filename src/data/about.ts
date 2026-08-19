@@ -53,11 +53,11 @@ export const missionVision = {
   mission: {
     title: 'Mission',
     icon: '/about/icons/mission.png',
-    text: 'Deliver mud engineering and fluids solutions that protect people, strengthen well performance, and create lasting operational value for our clients.',
+    text: 'To redefine the African oil & gas support services industry by delivering safe, reliable, and innovative engineering, construction, and logistics solutions through excellence, integrity, and quality service.',
   },
   vision: {
     title: 'Vision',
     icon: '/about/icons/vision.png',
-    text: 'Be the fluids partner operators trust when certainty, competence, and integrity matter most across Nigerian oil and gas operations.',
+    text: 'To be Africa’s leading oil & gas engineering and construction company, recognized for excellence, innovation, and sustainable solutions.',
   },
 } as const
