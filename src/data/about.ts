@@ -41,6 +41,11 @@ export const clientLogos = [
   { name: 'ExxonMobil', src: '/about/clients/exxon.png' },
   { name: 'Seplat', src: '/about/clients/seplat.png' },
   { name: 'Petroleum Training Institute', src: '/about/clients/pti.png' },
+  { name: 'DGS Integrated Projects Limited', src: '/about/clients/dgs.png' },
+  {
+    name: 'Sterling Oil Exploration and Energy Production Company Ltd',
+    src: '/about/clients/sterling.png',
+  },
 ] as const
 
 export const missionVision = {

@@ -53,7 +53,7 @@
 }
 
 .animate-client-marquee {
-  animation: client-marquee 28s linear infinite;
+  animation: client-marquee 40s linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {

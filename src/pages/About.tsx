@@ -174,9 +174,8 @@ export function About() {
       <section className="bg-surface py-20 sm:py-24">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <SectionHeading
-            eyebrow="Our clients"
-            title="Trusted by leading operators"
-            description="We partner with operators who trust us to deliver reliable fluids and field solutions."
+            title="Our clients"
+            description="We partner with leading multinational companies, operators, and organizations, delivering trusted engineering, construction, project management, logistics, supply, and oilfield solutions that drive project success."
             align="center"
           />
         </div>
