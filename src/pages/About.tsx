@@ -4,6 +4,7 @@ import { ArrowRight } from 'lucide-react'
 import { company, values } from '../data/company'
 import { clientLogos, missionVision, uniquePoints, whoWeAre } from '../data/about'
 import { HoverRevealImage } from '../components/HoverRevealImage'
+import { Logo } from '../components/Logo'
 import { SectionHeading } from '../components/SectionHeading'
 
 const HERO_IMAGE = '/images/hse-hero.png'
@@ -41,6 +42,7 @@ export function About() {
 
       <section className="bg-surface py-20 sm:py-24">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
+          <Logo variant="full" alt="" className="mb-8" />
           <SectionHeading title="Who we are" />
           <div className="mt-6 max-w-3xl space-y-4 text-ink-muted leading-relaxed">
             {whoWeAre.paragraphs.map((paragraph) => (

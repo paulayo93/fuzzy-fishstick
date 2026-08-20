@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Mail, MapPin, Phone } from 'lucide-react'
 import { company, navLinks, phoneTelHref } from '../data/company'
+import { Logo } from './Logo'
 
 export function Footer() {
   const year = new Date().getFullYear()
@@ -9,10 +10,7 @@ export function Footer() {
     <footer className="bg-navy-deep text-white">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 sm:px-8 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          <p className="font-display text-2xl font-bold tracking-tight">
-            {company.name}
-          </p>
-          <p className="mt-3 max-w-sm text-white/70">{company.tagline}</p>
+          <Logo variant="full" onDark />
         </div>
 
         <div>

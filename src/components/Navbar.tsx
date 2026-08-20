@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { ChevronDown, Menu, X } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { company, navLinks, type NavLink as NavLinkItem } from '../data/company'
+import { navLinks, type NavLink as NavLinkItem } from '../data/company'
+import { Logo } from './Logo'
 
 function linkIsActive(link: NavLinkItem, pathname: string) {
   if (link.children) {
@@ -54,15 +55,10 @@ export function Navbar() {
       <div className="mx-auto flex h-[4.5rem] max-w-6xl items-center justify-between px-5 sm:px-8">
         <Link
           to="/"
-          className="group flex items-center gap-3"
+          className="group flex items-center"
           onClick={() => setOpen(false)}
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-md bg-copper font-display text-sm font-bold text-white">
-            OL
-          </span>
-          <span className="font-display text-lg font-bold tracking-tight text-white">
-            {company.shortName}
-          </span>
+          <Logo variant="nav" onDark />
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary">
